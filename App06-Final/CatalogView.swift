@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct CatalogView: View {
+    
+    @StateObject var itemModel = ItemModel()
+    
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            List {
+                ForEach(itemModel.items) { item in
+                    Text(item.name)
+                }
+            }
+        }
     }
 }
 
