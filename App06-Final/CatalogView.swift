@@ -32,15 +32,29 @@ struct CatalogView: View {
                                     }
                                 }
                             VStack {
+                                HStack {
+                                    Spacer(minLength: 0)
+                                    let formattedPrice = String(format: "%.2f", item.price)
+                                    Text("$\(formattedPrice)")
+                                        .fontWeight(.heavy)
+                                        .foregroundColor(.black)
+                                        .padding(.vertical, 5)
+                                        .padding(.horizontal, 10)
+                                        .cornerRadius(20)
+                                        .background(Color("Peach").opacity(0.5))
+                                }
+                                
+                                
                                 KFImage(URL(string: item.image))
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(width: 80, height: 80, alignment: .center)
+                                    .frame(width: 70, height: 70, alignment: .center)
                                 
                                 
                                 Text(item.name)
-                                    .font(.system(size: 15, weight: .bold, design: .rounded))
+                                    .font(.system(size: 10, weight: .bold, design: .rounded))
                                     .foregroundColor(.black)
+                                    .multilineTextAlignment(.center)
                                     .padding(10)
                             }
                         }
@@ -49,6 +63,17 @@ struct CatalogView: View {
                 .padding(15)
             }
             .navigationBarTitle("Let's Shop")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                              print("button pressed")
+
+                            }) {
+                                Image(systemName: "cart")
+                            }
+                    
+                }
+            }
         }
     }
 }
