@@ -37,6 +37,7 @@ struct ItemDetailView: View {
                     .padding(.bottom, 30)
                 Button(action: {
                     shopItem = true
+                    cartArray.append(item)
                 }, label: {
                     HStack {
                         Image(systemName: "cart.fill")
