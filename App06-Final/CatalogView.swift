@@ -10,15 +10,31 @@ import SwiftUI
 struct CatalogView: View {
     
     @StateObject var itemModel = ItemModel()
-    
+    private let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
     
     var body: some View {
-        VStack {
-            List {
-                ForEach(itemModel.items) { item in
-                    Text(item.name)
+        NavigationView {
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 10) {
+                    ForEach(itemModel.items) { item in
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 20)
+                                .foregroundColor(Color("Peach"))
+                                .frame(height: 200)
+                            
+                            Text(item.name)
+                                .font(.system(size: 15, weight: .bold, design: .rounded))
+                                .foregroundColor(.black)
+                                .padding(10)
+                        }
+                    }
                 }
+                .padding(15)
             }
+            .navigationBarTitle("Let's Shop")
         }
     }
 }

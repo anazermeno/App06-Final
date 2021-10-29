@@ -25,7 +25,6 @@ class ItemModel: ObservableObject {
             
             var item: Item
             for product in json {
-// //               print(movie.1["title"].stringValue)
                 item = Item(id: product.1["id"].intValue,
                                name: product.1["title"].stringValue,
                                price: product.1["price"].doubleValue,
