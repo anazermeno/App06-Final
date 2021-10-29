@@ -24,6 +24,8 @@ struct ItemDetailView: View {
                     .font(.title)
                     .fontWeight(.bold)
                     .padding(.bottom, 10)
+                    .multilineTextAlignment(.center)
+                    .padding(10)
                 Text(String(format: "Price: $%.2f", item.price))
                     .padding(.bottom, 5)
                 Text("\(item.desc)")
@@ -45,6 +47,9 @@ struct ItemDetailView: View {
                     .background(Color("Peach"))
                     .cornerRadius(20)
                 })
+                    .alert("Product added to cart", isPresented: $shopItem) {
+                        Button("OK", role: .cancel) { }
+                    }
             }
             .foregroundColor(Color("TextColor"))
         }
