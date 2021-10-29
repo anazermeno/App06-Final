@@ -19,6 +19,7 @@
 		6E646D89272C4D65007BAAAE /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E646D88272C4D65007BAAAE /* Colors.xcassets */; };
 		6E646D8D272C6569007BAAAE /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E646D8C272C6569007BAAAE /* ItemDetailView.swift */; };
 		6E646D8F272C78F7007BAAAE /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E646D8E272C78F7007BAAAE /* Store.swift */; };
+		6E646D91272C7E6F007BAAAE /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E646D90272C7E6F007BAAAE /* CartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		6E646D88272C4D65007BAAAE /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		6E646D8C272C6569007BAAAE /* ItemDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		6E646D8E272C78F7007BAAAE /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		6E646D90272C7E6F007BAAAE /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				6E646D6D272C37D9007BAAAE /* App06_FinalApp.swift */,
 				6E646D8C272C6569007BAAAE /* ItemDetailView.swift */,
 				6E646D6F272C37D9007BAAAE /* CatalogView.swift */,
+				6E646D90272C7E6F007BAAAE /* CartView.swift */,
 				6E646D8E272C78F7007BAAAE /* Store.swift */,
 				6E646D71272C37DD007BAAAE /* Assets.xcassets */,
 				6E646D88272C4D65007BAAAE /* Colors.xcassets */,
@@ -182,6 +185,7 @@
 				6E646D82272C3CE0007BAAAE /* SwiftyJSON.swift in Sources */,
 				6E646D70272C37D9007BAAAE /* CatalogView.swift in Sources */,
 				6E646D6E272C37D9007BAAAE /* App06_FinalApp.swift in Sources */,
+				6E646D91272C7E6F007BAAAE /* CartView.swift in Sources */,
 				6E646D8D272C6569007BAAAE /* ItemDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

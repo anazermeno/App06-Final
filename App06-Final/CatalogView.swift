@@ -15,6 +15,7 @@ struct CatalogView: View {
         GridItem(.flexible(), spacing: 20),
         GridItem(.flexible(), spacing: 20)
     ]
+    @State var showCartView : Bool = false
     
     var body: some View {
         NavigationView {
@@ -68,17 +69,21 @@ struct CatalogView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
+                            showCartView = true
                               print("button pressed")
-
                             }) {
                                 Image(systemName: "cart")
                             }
-                    
                 }
             }
         }
+        .sheet(isPresented: $showCartView, content: {
+            CartView()
+            })
     }
-}
+    
+    }
+               
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
